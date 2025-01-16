@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const fontFamily = require('tailwindcss/defaultTheme').fontFamily;
 
 const config: Config = {
     darkMode: ["class"],
@@ -18,7 +19,10 @@ const config: Config = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-  		colors: {}
+  		colors: {},
+			fontFamily: {
+        sans: ['var(--font-sans)', ...fontFamily.sans],
+      },
   	}
   },
   plugins: [require("tailwindcss-animate")],
