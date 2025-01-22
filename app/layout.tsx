@@ -33,16 +33,14 @@ export default function RootLayout({
       }}
     >
       <html lang="en" suppressHydrationWarning>
-        <Provider>
-          <body
-            className={cn(
-              "min-h-screen font-sans antialiased",
-              fontSans.variable
-            )}
-          >
-            {children}
-          </body>
-        </Provider>
+        <body
+          className={cn(
+            "min-h-screen font-sans antialiased",
+            fontSans.variable
+          )}
+        >
+          <Provider>{children}</Provider>
+        </body>
       </html>
     </ClerkProvider>
   );

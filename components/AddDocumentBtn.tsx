@@ -1,11 +1,11 @@
 "use client";
 
 import { createDocument } from "@/lib/actions/room.actions";
-import { Button } from "./button";
+import { Button } from "./ui/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-const AddDocumentButton = ({ userId, email }: AddDocumentBtnProps) => {
+const AddDocumentBtn = ({ userId, email }: AddDocumentBtnProps) => {
   const router = useRouter();
 
   const addDocumentHandler = async () => {
@@ -30,4 +30,4 @@ const AddDocumentButton = ({ userId, email }: AddDocumentBtnProps) => {
   );
 };
 
-export default AddDocumentButton;
+export default AddDocumentBtn;
